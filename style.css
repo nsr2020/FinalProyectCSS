@@ -58,9 +58,8 @@
   width: 45px;
 }
 #header {
-  padding: var(--nsr-pad20) var(--nsr-pad10);
   width: 100%;
-
+  padding: var(--nsr-pad20) var(--nsr-pad10);
   background-color: var(--nsr-btblue);
 }
 #header a {
@@ -72,6 +71,7 @@
 }
 
 /*Hero*/
+
 .info > h2 {
   text-shadow: 1px 1px 2px black;
 }
@@ -84,9 +84,8 @@
   align-items: center;
   background-color: var(--nsr-choco);
   justify-content: space-around;
-  padding: var(--nsr-pad20);
+  height: 70svh;
   width: 100%;
-  height: 80svh;
 }
 /*izq*/
 #hero > div {
@@ -206,6 +205,9 @@ Section 2*/
 #ofertas > article {
   gap: var(--nsr-pad20);
 }
+#ofertas .sales {
+  position: relative;
+}
 
 .product1 {
   width: 300px;
@@ -214,7 +216,7 @@ Section 2*/
   border-radius: var(--nsr-br);
   box-shadow: 5px 10px var(--nsr-black);
 }
-.product1 > img {
+.product1 > a > img {
   width: 291px;
   height: 300px;
 }
@@ -224,6 +226,7 @@ Section 2*/
   justify-content: center;
   align-items: center;
 }
+
 .product2 {
   width: 300px;
   height: 400px;
@@ -231,10 +234,11 @@ Section 2*/
   border-radius: var(--nsr-br);
   box-shadow: 5px 10px var(--nsr-black);
 }
-.product2 > img {
+.product2 > a > img {
   width: 291px;
   height: 300px;
 }
+
 .product2 > div {
   display: flex;
   flex-direction: column;
@@ -248,7 +252,7 @@ Section 2*/
   border-radius: var(--nsr-br);
   box-shadow: 5px 10px var(--nsr-black);
 }
-.product3 > img {
+.product3 > a > img {
   width: 291px;
   height: 300px;
 }
@@ -267,7 +271,7 @@ Section 2*/
   border-radius: var(--nsr-br);
   box-shadow: 5px 10px var(--nsr-black);
 }
-.product4 > img {
+.product4 > a > img {
   width: 291px;
   height: 300px;
 }
@@ -286,7 +290,7 @@ Section 2*/
   border-radius: var(--nsr-br);
   box-shadow: 5px 10px var(--nsr-black);
 }
-.product5 > img {
+.product5 a > img {
   width: 291px;
   height: 300px;
 }
@@ -305,7 +309,7 @@ Section 2*/
   border-radius: var(--nsr-br);
   box-shadow: 5px 10px var(--nsr-black);
 }
-.product6 > img {
+.product6 > a > img {
   width: 291px;
   height: 300px;
 }
@@ -315,6 +319,89 @@ Section 2*/
   justify-content: center;
   align-items: center;
 }
+/* maquetación de los botones*/
+#ofertas button {
+  padding: var(--nsr-pad10);
+  border: var(--nsr-rad);
+  border-radius: 100%;
+  font-weight: bold;
+  background-color: var(--nsr-blue);
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+}
+/*Maquetación de los a que llevan a la web original con rel="noopener"*/
+#ofertas a {
+  color: greenyellow;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/*Maquetación del footer form*/
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  background-color: var(--nsr-blue);
+  gap: var(--nsr-bor30);
+  justify-content: space-around;
+}
+.form-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border: 2px solid black;
+  background-color: rgb(215, 72, 72);
+  justify-content: center;
+}
+.form-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-bottom: 5px;
+}
+.form-group > input {
+  padding: 8px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+.form-group > button {
+  padding: 8px;
+  border: 2px solid var(--nsr-black);
+  border-radius: 5px;
+  background-color: var(--nsr-blue);
+  color: var(--nsr-white);
+  cursor: pointer;
+  font-weight: bold;
+}
+/*2 parte del footer*/
+.social {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+}
+.social img {
+  width: 30px;
+}
+/*Tercera parte del footer*/
+.social2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: bold;
+  text-align: justify;
+}
+
 /*Responsive Hero*/
 @media screen and (max-width: 800px) {
   #hero img {
