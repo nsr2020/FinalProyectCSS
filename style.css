@@ -51,9 +51,19 @@
   flex-wrap: wrap;
   gap: var(--nsr-pad20);
 }
+/*Ponemos relative al body para que que el fixed pueda funcionar*/
+body {
+  position: relative;
+}
 
 /*Maquetación del Header y Nav*/
-
+header {
+  position: fixed;
+  z-index: 2;
+  border-bottom: var(--nsr-rad);
+  background-image: url('https://res.cloudinary.com/dnju3aw4b/image/upload/v1699392332/fondocielo_h8wzji.jpg');
+  background-size: cover;
+}
 #header img {
   width: 45px;
 }
@@ -76,23 +86,23 @@
   text-shadow: 1px 1px 2px black;
 }
 .info > p {
-  font-weight: italic;
+  font-weight: bold;
 }
 
 #hero {
   display: flex;
   align-items: center;
   background-color: var(--nsr-choco);
-  justify-content: space-around;
+  justify-content: space-evenly;
   height: 70svh;
-  width: 100%;
+  padding: 0;
 }
 /*izq*/
-#hero > div {
+#hero .info {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   text-align: justify;
   width: 30%;
   gap: var(--nsr-pad10);
@@ -100,13 +110,17 @@
   margin-top: 105px;
 }
 /*derecha*/
-#hero > img {
+#hero img {
   min-width: 300px;
   max-width: 300px;
   height: 300px;
   margin-top: 105px;
 }
-
+.image {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+}
 /*
 Section 2*/
 .st2 {
